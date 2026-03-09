@@ -1,125 +1,124 @@
+# Retail Sales EDA (2014–2017)
 
-# Retail E-Commerce Sales Analysis (2014–2017)
-
-## Project Overview
-
-This project analyzes four years of retail e-commerce sales data (2014–2017) to evaluate revenue drivers, profitability, customer behavior, seasonality, and regional performance.
-
-The dataset contains:
-
-* 9,994 orders
-* 793 unique customers
-* 1,862 products
-* Total revenue of $2.29M 
-
-The objective of this analysis is to identify operational inefficiencies and provide data-driven business recommendations.
+> **SQL-based exploratory analysis of 4 years of retail e-commerce data, focusing on revenue drivers, profitability gaps, customer behavior, and regional performance.**
 
 ---
 
-## Revenue and Profitability Analysis
+##  Project Overview
 
-Revenue is distributed relatively evenly across three categories:
+This project analyzes four years of retail sales data to evaluate revenue performance, uncover profitability inefficiencies, understand customer behavior, and identify regional growth opportunities.
 
-* Technology: 36% of total revenue
-* Furniture: 32%
-* Office Supplies: 31%
-
-However, profitability reveals a major imbalance:
-
-* Technology profit margin: 17.4%
-* Office Supplies profit margin: 17.0%
-* Furniture profit margin: 2.5%
-
-Although Furniture generates nearly one-third of total revenue, it contributes very little to overall profit.
-
-Business implication: The company is revenue-strong but profit-inefficient in the Furniture category.
-
-Recommendation:
-
-* Reassess discount strategies
-* Optimize logistics and shipping costs
-* Renegotiate supplier pricing
-* Shift marketing focus toward higher-margin categories
+| Metric | Value |
+|--------|-------|
+| Total Orders | 9,994 |
+| Unique Customers | 793 |
+| Total Products | 1,862 |
+| Total Revenue | $2.29M |
+| Time Period | 2014 – 2017 |
 
 ---
 
-## Seasonal Sales Trends
+## Tools & Techniques
 
-Monthly analysis shows strong seasonality:
-
-* Revenue peaks in November and December
-* January and February are the lowest-performing months
-
-The business heavily depends on Q4 performance.
-
-Business implication: Annual results are significantly influenced by year-end demand.
-
-Recommendation:
-
-* Increase marketing spend before Q4
-* Improve inventory planning ahead of peak months
-* Launch promotions during slow months to smooth revenue fluctuations
+- **SQL** — CTEs, Window Functions, Aggregations, Subqueries
+- **RFM Analysis** — Customer segmentation by Recency, Frequency, Monetary value
+- **Profitability Analysis** — Margin comparison across categories
+- **Trend & Seasonality Analysis** — Monthly and quarterly revenue patterns
 
 ---
 
-## Customer Segmentation (RFM Analysis)
+##  Key Findings
 
-Customer segmentation reveals:
+### 1. Revenue vs. Profitability Gap
 
-* 357 customers classified as “At Risk”
-* Loyal customers generate the highest average lifetime value
-* A significant portion of customers show declining engagement
+Revenue is distributed relatively evenly across categories — but profitability tells a very different story:
 
-Business implication: Customer churn represents a potential revenue risk.
+| Category | Revenue Share | Profit Margin |
+|----------|--------------|---------------|
+| Technology | 36% | 17.4% |
+| Office Supplies | 31% | 17.0% |
+| Furniture | 32% | **2.5%**  |
 
-Recommendation:
+> **Insight:** Furniture generates nearly one-third of total revenue but contributes almost nothing to profit — a classic revenue-strong, margin-weak problem.
 
-* Launch targeted reactivation campaigns
-* Introduce loyalty and retention programs
-* Personalize offers for high-frequency customers
-
-Improving retention could significantly increase long-term profitability.
-
----
-
-## Product and Regional Insights
-
-Top-performing products are high-ticket items that generate substantial revenue despite low unit sales.
-
-Business implication: Revenue is concentrated in premium products, creating dependency risk.
-
-Recommendation:
-
-* Protect inventory of high-value products
-* Offer extended warranties and bundled services
-
-Regional analysis shows:
-
-* West and East contribute the highest revenue share
-* South has relatively lower revenue but higher average order value
-
-Recommendation:
-
-* Expand marketing efforts in underperforming regions
-* Explore regional demand patterns for targeted growth
+**Recommendations:**
+- Reassess discount strategies on Furniture products
+- Optimize logistics and shipping costs for bulky items
+- Renegotiate supplier pricing
+- Shift marketing focus toward higher-margin categories
 
 ---
 
-## Key Conclusion
+### 2. Seasonal Sales Trends
 
-The company demonstrates strong revenue performance but faces profitability challenges, particularly in the Furniture category. Customer retention and margin optimization represent the largest opportunities for improvement.
+Monthly analysis reveals strong Q4 dependency:
 
-By improving Furniture margins and implementing targeted retention strategies, overall profitability could increase substantially.
+-  **Revenue peaks in November and December**
+-  **January and February are the lowest-performing months**
+- Annual performance is heavily influenced by year-end demand
 
----
-
-## Tools and Techniques Used
-
-* SQL (CTEs, Window Functions, Aggregations)
-* RFM Analysis
-* Profitability Analysis
-* Trend and Seasonality Analysis
-* Business Insight Generation
+**Recommendations:**
+- Increase marketing spend ahead of Q4
+- Improve inventory planning before peak months
+- Launch promotions in slow months (Jan–Feb) to smooth revenue fluctuations
 
 ---
 
+### 3. Customer Segmentation — RFM Analysis
+
+| Segment | Finding |
+|---------|---------|
+| At-Risk Customers | 357 customers showing declining engagement |
+| Loyal Customers | Highest average lifetime value |
+| Overall Trend | Significant portion of customers disengaging over time |
+
+> **Insight:** Customer churn represents a measurable revenue risk given the relatively small base of 793 customers.
+
+**Recommendations:**
+- Launch targeted reactivation campaigns for at-risk customers
+- Introduce loyalty and retention programs
+- Personalize offers for high-frequency buyers
+
+---
+
+### 4. Product & Regional Performance
+
+**Products:**
+- Revenue is concentrated in high-ticket, low-volume items
+- Creates dependency risk if premium product inventory is disrupted
+
+**Regions:**
+
+| Region | Performance |
+|--------|-------------|
+| West & East | Highest revenue contribution |
+| South | Lower revenue but **higher average order value** |
+
+**Recommendations:**
+- Protect and prioritize inventory of high-value products
+- Offer extended warranties and bundled services on premium items
+- Expand marketing in underperforming regions
+- Explore South region's high AOV as a premium upsell opportunity
+
+---
+
+##  Conclusion
+
+The business demonstrates strong top-line performance but faces significant profitability challenges — primarily in the Furniture category. Combined with customer retention risk and regional concentration, the largest opportunities lie in:
+
+1. **Improving Furniture margins** through cost and discount optimization
+2. **Retaining at-risk customers** through targeted engagement
+3. **Leveraging regional AOV differences** for strategic growth
+
+Addressing these areas could substantially improve overall profitability without requiring revenue growth.
+
+---
+
+##  File Structure
+
+```
+ Retail_EDA
+ ┣ retail_eda.sql        # Full SQL analysis script
+ ┣ README.md             # Project documentation
+ ┗ screenshots/          # Query output snapshots 
+```
