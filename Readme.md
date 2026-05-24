@@ -1,4 +1,4 @@
-# Retail Sales EDA (2014–2017)
+# Retail Sales EDA 
 
 > **SQL-based exploratory analysis of 4 years of retail e-commerce data, focusing on revenue drivers, profitability gaps, customer behavior, and regional performance.**
 
